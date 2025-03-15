@@ -140,7 +140,7 @@ if st.button("🔍 Predict Risk"):
             """)
 
             # Data Information Notes 
-            st.subheader("Predictive Notes")
+            st.subheader("📌 Predictive Notes")
             st.write("""
                      Predictive models aim to forecast the likelihood or timing of outcomes (e.g., cardiovascular disease, stroke) based on baseline data. The Framingham study is renowned for cardiovascular risk assessment, so predictors should be relevant to such outcomes. All baseline characteristics are potential predictors because they provide information about risk factors:
                      - 'SEX': Gender differences affect disease risk.
