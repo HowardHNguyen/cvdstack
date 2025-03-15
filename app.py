@@ -140,7 +140,7 @@ if st.button("🔍 Predict Risk"):
             """)
 
             # Data Information Notes 
-            st.subheader("Data Information")
+            st.subheader("Predictive Notes")
             st.write("""
                      Predictive models aim to forecast the likelihood or timing of outcomes (e.g., cardiovascular disease, stroke) based on baseline data. The Framingham study is renowned for cardiovascular risk assessment, so predictors should be relevant to such outcomes. All baseline characteristics are potential predictors because they provide information about risk factors:
                      - 'SEX': Gender differences affect disease risk.
@@ -155,6 +155,18 @@ if st.button("🔍 Predict Risk"):
                      - 'GLUCOSE': Elevated levels indicate metabolic issues.
                      - 'educ': Socioeconomic status influences health outcomes.
                      - 'PREVCHD', 'PREVAP', 'PREVMI', 'PREVSTRK', 'PREVHYP': Prior events strongly predict future events.
+            """, unsafe_allow_html=True)
+
+            # Data Information Notes 
+            st.subheader("📌 Preventive Notes")
+            st.write("""
+                     Preventive attributes are modifiable risk factors. While all predictors contribute to risk assessment, the following are directly modifiable or indicate conditions amenable to intervention:
+                     - 'CURSMOKE', 'CIGPDAY': Smoking cessation reduces risk.
+                     - 'SYSBP', 'DIABP', 'BPMEDS': Blood pressure can be managed with lifestyle changes or medication.
+                     - 'TOTCHOL', 'HDLC', 'LDLC': Cholesterol levels can be altered via diet, exercise, or drugs.
+                     - 'BMI': Weight loss improves health outcomes.
+                     - 'GLUCOSE', 'DIABETES': Glucose control prevents diabetes progression.
+                     - 'HEARTRTE': Exercise can improve resting heart rate.
             """, unsafe_allow_html=True)
 
         except Exception as e:
