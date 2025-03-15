@@ -77,7 +77,7 @@ st.sidebar.header("📋 Input Your Health Metrics")
 user_data = {
     'SEX': st.sidebar.selectbox("SEX (0 = Female, 1 = Male)", [0, 1], index=1),
     'AGE': st.sidebar.slider("AGE", 32.0, 81.0, 35.0),
-    'educ': st.sidebar.slider("Education Level (educ)", 1.0, 4.0, 2.0),
+    'educ': st.sidebar.slider("Education Level (educ)", 1.0, 4.0, 3.0),
     'CURSMOKE': st.sidebar.selectbox("Current Smoker (0 = No, 1 = Yes)", [0, 1], index=0),
     'CIGPDAY': st.sidebar.slider("Cigarettes per Day", 0.0, 90.0, 0.0),
     'TOTCHOL': st.sidebar.slider("Total Cholesterol", 107.0, 696.0, 195.0),
