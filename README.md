@@ -66,15 +66,56 @@ Traditional models capture linear relationships but miss subtle, nonlinear inter
 | Deployment | Streamlit Cloud + GitHub (main branch root files) |
 | Environment Control | `scikit-learn==1.6.1` · `joblib==1.4.2` · `lightgbm==4.5.0` · `xgboost==2.1.1` |
 
-## 🚀 How to Run Locally
 
-```bash
-# Clone repository
-git clone https://github.com/HowardHNguyen/cvdstack.git
-cd cvdstack
+## 📊 Live Dashboard Highlights
 
-# Install dependencies
-pip install -r requirements.txt
+### 🧩 Model Summary
+Displays performance metrics for each algorithm — including **AUC**, **Accuracy**, **Precision**, and **Recall** — enabling direct comparison of model reliability.
 
-# Run the Streamlit app
-streamlit run app.py
+### 🔍 Feature Importance
+Visualizes which clinical variables (such as **BMI**, **sysBP**, **glucose**, and **totChol**) contribute most to prediction outcomes, providing explainability for clinicians and researchers.
+
+### ⚖️ Threshold Tuning
+Allows adjustment of the decision threshold to fine-tune the balance between **Sensitivity (Recall)** and **Specificity (Precision)** for different clinical priorities.
+
+### 📂 Data Upload
+Supports drag-and-drop of new CSV files, allowing external researchers or clinicians to test their own patient data and instantly visualize predictions.
+
+### 💬 Interpretability Layer
+Includes SHAP explainers and calibration metrics to translate raw model outputs into transparent, actionable insights.
+
+## 🧬 Research Significance
+
+> This project demonstrates that **Stacking Generative AI** can achieve medical-grade predictive accuracy and enhanced fairness for underrepresented patient groups.
+
+It contributes to the next generation of **AI Health Diagnostics** and aligns with the vision of **AICardioHealth Inc.**, a startup dedicated to advancing AI-driven cardiovascular prevention.
+
+By integrating Generative AI with ensemble learning, **CVDStack** represents a paradigm shift in how healthcare systems can predict, explain, and prevent heart failure through data science.
+
+## 🏁 Summary
+
+**CVDStack = Generative AI + Stacked Learning + Explainable Healthcare.**  
+It moves beyond prediction to personalized intervention — turning clinical data into life-saving insights.
+
+> *Predict early. Explain clearly. Act precisely.*
+
+## 🧾 License
+
+**Copyright © 2025 Howard Nguyen**  
+*(MaxAIS · AICardioHealth)*
+
+Permission is hereby granted **with explicit written approval from Howard Nguyen** to use, copy, modify, and distribute this software and its associated documentation files.  
+Unauthorized reproduction, redistribution, or modification without prior approval is strictly prohibited.
+
+For commercial use, research collaboration, or licensing inquiries, please contact **info@howardnguyen.com**.
+
+## 💬 Contact
+
+📧 **Email:** info@howardnguyen.com  
+🌐 **Website:** [www.maxais.com](https://www.maxais.com)  
+🔗 **LinkedIn:** [Howard H. Nguyen](https://www.linkedin.com/in/howardhnguyen/)
+
+## ⭐ Acknowledgments
+
+Special thanks to **Harrisburg University** faculty and research mentors for academic guidance.  
+This project also draws inspiration from global healthcare AI initiatives advancing cardiovascular prediction and early intervention.
