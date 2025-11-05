@@ -7,6 +7,40 @@ import os
 import urllib.request
 from sklearn.metrics import classification_report, roc_auc_score, roc_curve, accuracy_score
 
+# --- UI CONFIGURATION ---
+st.set_page_config(
+    page_title="CVDStack – AI Cardiovascular Risk Prediction",
+    page_icon="🫀",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# --- HIDE STREAMLIT DEFAULT MENUS & ICONS ---
+hide_streamlit_style = """
+    <style>
+    /* Hide MainMenu, Footer, and Header */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* Hide the three-dot menu in the top-right corner */
+    .stActionButton {visibility: hidden;}
+    .st-emotion-cache-1dp5vir {display: none;}
+    [data-testid="stToolbar"] {visibility: hidden !important;}
+    [data-testid="stDecoration"] {display: none;}
+    [data-testid="stStatusWidget"] {display: none;}
+    [data-testid="stSidebarNav"] {display: none;}
+    .stDeployButton {display: none;}
+    .stToolbarActions {display: none;}
+    .stToolbar {display: none;}
+
+    /* Hide Streamlit bottom-right icons */
+    .stAppDeployButton, .st-emotion-cache-6qob1r {display: none !important;}
+    .stAppBottomRightButtons {display: none !important;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Set page config for a wider layout
 st.set_page_config(page_title="CVD Risk Prediction", layout="wide")
 
@@ -68,7 +102,7 @@ feature_columns = [
 ]
 
 # Title
-st.title("🫀 Cardiovascular Disease (CVD) Risk Prediction")
+# st.title("🫀 Cardiovascular Disease (CVD) Risk Prediction")
 st.write("This tool helps assess your potential risk of developing CVD based on clinical parameters.")
 
 # Sidebar Inputs
