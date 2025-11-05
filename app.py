@@ -102,7 +102,7 @@ feature_columns = [
 ]
 
 # Title
-# st.title("🫀 Cardiovascular Disease (CVD) Risk Prediction")
+st.title("🫀 Cardiovascular Disease (CVD) Risk Prediction")
 st.write("This tool helps assess your potential risk of developing CVD based on clinical parameters.")
 
 # Sidebar Inputs
