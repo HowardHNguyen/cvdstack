@@ -10,6 +10,26 @@ from sklearn.metrics import classification_report, roc_auc_score, roc_curve, acc
 # Set page config for a wider layout
 st.set_page_config(page_title="CVD Risk Prediction", layout="wide")
 
+# --- Hide ONLY the top-right toolbar + bottom-right watermark ---
+st.markdown("""
+<style>
+/* Keep the sidebar and header visible */
+header { visibility: visible !important; }
+div[data-testid="stSidebar"] { visibility: visible !important; display: block !important; }
+
+/* Hide top-right toolbar (Fork / GitHub / ⋮) */
+div[data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
+.stToolbar, .stToolbarActions, .stActionButton, .stDeployButton { display: none !important; }
+div[data-testid="stDecoration"], div[data-testid="stStatusWidget"] { display: none !important; }
+
+/* Hide bottom-right Streamlit icons/watermark */
+.stAppBottomRightButtons, .st-emotion-cache-6qob1r, .stAppDeployButton { display: none !important; }
+
+/* Defensive: hide deploy/manage button but keep sidebar functional */
+button.stDeployButton, .stDeployButton { display: none !important; }
+</style>
+""", unsafe_allow_html=True)
+
 # Function to download a file if it doesn’t exist
 def download_file(url, dest):
     try:
