@@ -8,25 +8,31 @@ import urllib.request
 from sklearn.metrics import classification_report, roc_auc_score, roc_curve, accuracy_score
 
 # Set page config for a wider layout
-st.set_page_config(page_title="CVD Risk Prediction", layout="wide")
-
-# --- Hide ONLY the top-right toolbar + bottom-right watermark ---
+st.set_page_config(
+    page_title="CVDStack – AI Cardiovascular Risk Prediction",
+    page_icon="🫀",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+# --- Minimal + safe: keep sidebar/chevron; hide only right-side chrome ---
 st.markdown("""
 <style>
-/* Keep the sidebar and header visible */
+/* Keep header, decoration strip (chevron host), and sidebar visible */
 header { visibility: visible !important; }
+div[data-testid="stDecoration"] { display: block !important; visibility: visible !important; }
 div[data-testid="stSidebar"] { visibility: visible !important; display: block !important; }
 
-/* Hide top-right toolbar (Fork / GitHub / ⋮) */
-div[data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
-.stToolbar, .stToolbarActions, .stActionButton, .stDeployButton { display: none !important; }
-div[data-testid="stDecoration"], div[data-testid="stStatusWidget"] { display: none !important; }
+/* Hide ONLY the top-right toolbar actions (Fork / GitHub / ⋮) */
+div[data-testid="stToolbarActions"] { display: none !important; }
 
-/* Hide bottom-right Streamlit icons/watermark */
-.stAppBottomRightButtons, .st-emotion-cache-6qob1r, .stAppDeployButton { display: none !important; }
+/* Keep toolbar container so layout & chevron logic remain intact */
+div[data-testid="stToolbar"] { display: block !important; visibility: visible !important; }
 
-/* Defensive: hide deploy/manage button but keep sidebar functional */
-button.stDeployButton, .stDeployButton { display: none !important; }
+/* Hide bottom-right Streamlit buttons/watermark */
+.stAppBottomRightButtons, .stAppDeployButton { display: none !important; }
+
+/* Optional: hide legacy text MainMenu (does not affect sidebar) */
+#MainMenu { visibility: hidden; }
 </style>
 """, unsafe_allow_html=True)
 
